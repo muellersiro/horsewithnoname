@@ -50,7 +50,7 @@ public class ShoppingCart extends Collection {
 				gesMwst += mwst;
 				gesMwstRate += item.getMwstrate();
 			}
-			//summ overall
+			//sum overall
 			System.out.println("\n" + "Der Gesamtpreis von " + Product.formatfloats(gesPrice) + " CHF" + " enthält " + Product.formatfloats(gesMwst) + " "
 					+ super.currency + " MwSt (" + gesMwstRate + " %)");
 		} else {
