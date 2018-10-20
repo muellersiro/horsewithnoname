@@ -31,7 +31,6 @@ public class ShoppingCart extends Collection {
 			}
         }		
 		collection.set(i, assortmentItem);
-		
 	}
 
 	public void showContent() {

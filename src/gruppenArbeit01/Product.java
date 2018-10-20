@@ -4,8 +4,8 @@
 * Müller, Siro; Tommasi Nicola
 *
 */
-package gruppenArbeit01;
 
+package gruppenArbeit01;
 
 public class Product {
 
@@ -19,7 +19,6 @@ public class Product {
 	public int getQuantity() {
 		return quantity;
 	}
-
 
 	public Product(int id, String itemName, float price, float mwstRate) {
 		super();
@@ -57,7 +56,6 @@ public class Product {
 	public String getItemName() {
 		return itemName;
 	}
-
 
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
