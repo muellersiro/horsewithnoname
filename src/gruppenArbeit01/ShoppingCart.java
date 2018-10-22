@@ -42,19 +42,54 @@ public class ShoppingCart extends Collection {
 			System.out.println("Ihr Warenkorb:");
 			for (Product item : collection) {
 				float price = item.getPrice() * item.getQuantity();
-				float mwst = price * item.getMwst();
-				//Sum for each product
-				System.out.println(item.getQuantity() + "\t" + item.getItemName() + "\t" + Product.formatfloats(item.getPrice()) + " "
-						+ this.currency + "\t" + Product.formatfloats(price) + " " + this.currency);
+				float mwst = price  - (price / ((item.getMwstrate() / 100) + 1));
+				
+				// output sum for each product individually
+				
+				// output quantity (max 99)
+				System.out.printf("%1$2d ", item.getQuantity());
+				// output name
+				// output item name (max length 30 to be displayed properly)
+				System.out.printf("%1$-30s ", item.getItemName());
+				// output item price (max 999.99 to be displayed properly)
+				System.out.printf("%1$6.2f ", item.getPrice());
+				// output currency
+				System.out.printf("%s", this.currency);
+				// output total price (max 999.99 to be displayed properly)
+				System.out.printf("%1$6.2f ", price);
+				// output currency
+				System.out.printf("%s", this.currency);
+				// output line break
+				System.out.print("\n");
+				
 				gesPrice += price;
 				gesMwst += mwst;
-				gesMwstRate += item.getMwstrate();
 			}
-			//sum overall
-			System.out.println("\n" + "Der Gesamtpreis von " + Product.formatfloats(gesPrice) + " CHF" + " enthält " + Product.formatfloats(gesMwst) + " "
-					+ this.currency + " MwSt (" + gesMwstRate + " %)");
+			
+			// calculate total mwst rate
+			gesMwstRate = 100 * (gesMwst / (gesPrice - gesMwst));
+			
+			// output text
+			System.out.print("\n Der Gesamtpreis von ");
+			// total price
+			System.out.printf("%1$6.2f ", gesPrice);
+			// output currency
+			System.out.printf("%s", this.currency);
+			// output contains text
+			System.out.print(" enthält ");
+			// output total mwst
+			System.out.printf("%1$6.2f ", gesMwst);
+			// output currency
+			System.out.printf("%s", this.currency);
+			// output Mwst rate text
+			System.out.print(" Mwst (");
+			// output total mwst rate
+			System.out.printf("%1$.2f ", gesMwstRate);
+			// output % sign and closing )
+			System.out.print("%)\n");
+			
+			
 		} else {
-
 			System.out.println("Ihr Warenkorb ist leer.");
 		}
 

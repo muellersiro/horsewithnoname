@@ -28,7 +28,8 @@ public class Product {
 		this.mwstRate = mwstRate;
 		
 		//calculate mwst
-		this.mwst = this.price * this.mwstRate / 100f;
+		// Bruttopreis : (MWST-Satz + 1)
+		this.mwst = this .price - (this.price / ((this.mwstRate / 100) + 1));
 	}
 
 
@@ -77,11 +78,6 @@ public class Product {
 
 	public void setMwstrate(float mwstRate) {
 		this.mwstRate = mwstRate;
-	}
-	
-	public static String formatfloats(float toBeFormatted) {
-		String priceString = String.format("%.2f", toBeFormatted);
-		return priceString;
 	}
 
 	

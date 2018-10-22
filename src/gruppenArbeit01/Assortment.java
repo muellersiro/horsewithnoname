@@ -14,8 +14,8 @@ public class Assortment extends Collection {
 		
 		// create products for assortment
 		Product pr1 = new Product(1, "Walliser Roggenbrot", 4.10f, 2.5f);
-		Product pr2 = new Product(2, "Engadiner Nusstorte", 12.90f, 7.0f);
-		Product pr3 = new Product(3, "Langatun Whiskey OLD BEAR", 225.00f, 7.0f);
+		Product pr2 = new Product(2, "Engadiner Nusstorte", 12.90f, 7.7f);
+		Product pr3 = new Product(3, "Langatun Whiskey OLD BEAR", 225.00f, 7.7f);
 
 		// add products to assortment
 		this.addProduct(pr1);
