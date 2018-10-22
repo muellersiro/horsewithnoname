@@ -16,7 +16,6 @@ public class Collection {
 	protected String currency;
 
 	public Collection(String currency) {
-		super();
 		this.currency = currency;
 	}
 
