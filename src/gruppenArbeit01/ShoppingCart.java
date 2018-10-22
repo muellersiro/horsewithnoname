@@ -42,7 +42,7 @@ public class ShoppingCart extends Collection {
 			System.out.println("Ihr Warenkorb:");
 			for (Product item : collection) {
 				float price = item.getPrice() * item.getQuantity();
-				float mwst = item.getMwst() * item.getQuantity();
+				float mwst = price * item.getMwst();
 				//Sum for each product
 				System.out.println(item.getQuantity() + "\t" + item.getItemName() + "\t" + Product.formatfloats(item.getPrice()) + " "
 						+ this.currency + "\t" + Product.formatfloats(price) + " " + this.currency);

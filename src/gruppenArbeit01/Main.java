@@ -16,16 +16,6 @@ public class Main {
 		// create assortment
 		Assortment assortment = new Assortment("CHF");
 
-		// create products for assortment
-		Product pr1 = new Product(1, "Käsekuchen", 11.10f, 1.0f);
-		Product pr2 = new Product(2, "Nusstorte", 12.90f, 2.0f);
-		Product pr3 = new Product(3, "Whiskey Old", 45.90f, 10.0f);
-
-		// add products to assortment
-		assortment.addProduct(pr1);
-		assortment.addProduct(pr2);
-		assortment.addProduct(pr3);
-
 		// create shoppingCart
 		ShoppingCart shoppingCart = new ShoppingCart("CHF");
 
