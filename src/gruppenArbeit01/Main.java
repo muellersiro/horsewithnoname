@@ -22,6 +22,7 @@ public class Main {
 		// initialize scanner and listen
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
+			
 			shoppingCart.showContent();
 			assortment.showProducts();
 
